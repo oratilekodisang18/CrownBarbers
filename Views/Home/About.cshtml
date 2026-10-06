@@ -1,0 +1,7 @@
+@{ ViewData["Title"] = "About"; }
+
+<div class="sec"><div class="wrap two"><div><h1 style="font-size:clamp(2.6rem,6vw,4rem)">A barbershop that knows your name</h1>
+<p style="margin-top:16px">Crown Barber Shop started in 2012 with two chairs and a rule: nobody leaves until they're happy with the mirror. Fourteen years on we've grown to three chairs, but the rule hasn't changed.</p>
+<p>We cut fades, classic scissor work, kids' first haircuts and beards of every length. Every visit ends with a hot towel and a neck shave.</p></div>
+<div class="ph"><img src="/images/about.jpg" alt="Inside Crown Barber Shop" onerror="this.remove()"></div></div></div>
+<div class="sec alt"><div class="wrap"><h2>Your barbers</h2><div class="team">@foreach (var b in Catalog.Barbers) { <div><div class="ph"><img src="/images/@(b.Id).jpg" alt="@b.Name, barber" onerror="this.remove()"></div><h3>@b.Name</h3><em>@b.Role</em><p>@b.Bio</p></div> }</div></div></div>

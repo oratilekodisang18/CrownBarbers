@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@ViewData["Title"] | Crown Barber Shop</title>
+<meta name="description" content="Fades, classic cuts and hot towel shaves in Fourways. Book online in under a minute.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/images/crown-mark.png"><meta name="theme-color" content="#0A0A0B"><link rel="stylesheet" href="/css/site.css"></head><body>
+<header>
+<div class="wrap bar">
+<a class="brand" href="/" aria-label="Crown Barber Shop home"><img src="/images/crown-mark.png" alt="" width="72" height="39"><span><b>CROWN</b><small>Barber Shop</small></span></a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="/" data-p="home">Home</a></li><li><a href="/Services" data-p="services">Services</a></li><li><a href="/About" data-p="about">About</a></li><li><a href="/Booking" data-p="book">Contact</a></li>
+<li><a class="btn sm" href="/Booking">Book Now</a></li></ul></nav>
+</div><div class="pole"></div>
+</header>
+<main>@RenderBody()</main>
+<footer><div class="wrap"><div class="fg">
+<div><a href="/" aria-label="Crown Barber Shop home"><img class="flogo" src="/images/crown-logo.png" alt="Crown Barber Shop" width="220" height="153"></a><p class="slogan">A Cut Above the Rest</p><a class="btn sm" href="/Booking">Book Now</a></div>
+<div><h3>Explore</h3><ul><li><a href="/">Home</a></li><li><a href="/Services">Services</a></li><li><a href="/About">About</a></li><li><a href="/Booking">Contact &amp; booking</a></li></ul></div>
+<div><h3>Hours</h3><ul><li>Mon-Fri: 09:00 - 18:00</li><li>Saturday: 08:00 - 16:00</li><li>Sunday: Closed</li></ul></div>
+<div><h3>Visit</h3><ul><li>12 Cedar Avenue, Fourways, Johannesburg, 2055</li><li><a href="tel:+27115550142">011 555 0142</a></li><li><a href="mailto:hello@@crownbarbershop.example">hello@@crownbarbershop.example</a></li><li style="margin-top:10px"><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a> &nbsp; <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> &nbsp; <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+</div><div class="copy"><span>&copy; <span id="yr"></span> Crown Barber Shop. All rights reserved.</span><span><a href="/Terms">Terms &amp; Conditions</a> &nbsp;|&nbsp; <a href="/Terms#privacy">Privacy</a></span></div></div></footer>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mt"><div class="mbox"><button class="x" id="mx" aria-label="Close offer">&times;</button><div class="in">
+<h2 id="mt">First visit? 15% off.</h2><p>Book online and claim 15% off your first service with us.</p><div class="code">FIRST15</div><br>
+<a class="btn" href="/Booking" id="claim">Claim offer &amp; book</a> <button class="btn ghost" id="later" type="button">Not now</button></div></div></div>
+<script src="/js/site.js"></script>
+@RenderSection("Scripts", required: false)
+</body></html>

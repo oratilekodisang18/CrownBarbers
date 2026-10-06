@@ -1,0 +1,15 @@
+@{ ViewData["Title"] = "Book"; var pre = Context.Request.Query["s"].ToString(); }
+<div class="sec"><div class="wrap bk"><div>
+<h1 style="font-size:clamp(2.6rem,6vw,4rem);margin-bottom:20px">Book your chair</h1>
+<form id="f" novalidate>
+<div class="g2"><div><label for="svc">Service</label><select id="svc">@foreach (var s in Catalog.Services) { <option value="@s.Id" selected="@(s.Id == pre)">@($"{s.Name} - R{s.Price} ({s.Minutes} min)")</option> }</select></div>
+<div><label for="brb">Barber</label><select id="brb"><option value="any">Any available barber</option>@foreach (var b in Catalog.Barbers) { <option value="@b.Id">@b.Name</option> }</select></div></div>
+<div><label for="dt">Date</label><input type="date" id="dt" min="@(Sast.Today.ToString("yyyy-MM-dd"))" max="@(Sast.Today.AddDays(60).ToString("yyyy-MM-dd"))"></div>
+<div><label id="tl">Time</label><div class="slots" id="slots" role="group" aria-labelledby="tl"></div><p class="note" id="sn">Choose a date to see available times.</p></div>
+<div class="g2"><div><label for="nm">Full name</label><input id="nm" autocomplete="name"></div><div><label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel" placeholder="082 000 0000"></div></div>
+<div><label for="em">Email</label><input id="em" type="email" autocomplete="email"></div>
+<p class="err" id="err" role="alert"></p><button class="btn" id="go" type="submit">Confirm booking</button></form></div>
+<aside class="card"><h3>Find us</h3><dl><dt>Address</dt><dd>12 Cedar Avenue, Fourways, Johannesburg, 2055</dd><dt>Phone</dt><dd><a href="tel:+27115550142">011 555 0142</a></dd><dt>Email</dt><dd><a href="mailto:hello@@crownbarbershop.example">hello@@crownbarbershop.example</a></dd><dt>Mon-Fri</dt><dd>09:00 - 18:00</dd><dt>Saturday</dt><dd>08:00 - 16:00</dd><dt>Sunday</dt><dd>Closed</dd></dl>
+<p class="note" style="margin-top:14px">Free parking outside. Walk-ins welcome when a chair is free.</p></aside>
+</div></div>
+@section Scripts { <script src="/js/booking.js"></script> }

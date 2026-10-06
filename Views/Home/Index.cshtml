@@ -1,0 +1,11 @@
+@{ ViewData["Title"] = "Fourways barbers"; }
+
+<div class="wrap hero">
+<div><h1>A Cut Above<br>the Rest.</h1>
+<p>Fourways' neighbourhood barbershop since 2012. Pick your barber and your time, and we'll have the chair ready.</p>
+<div class="cta"><a class="btn" href="/Booking">Book Now</a><a class="btn ghost" href="/Services">See prices</a></div></div>
+<div class="ph"><img src="/images/hero1.jpg" alt="Barber finishing a fade in the shop" onerror="this.remove()"></div>
+</div>
+<div class="wrap"><div class="facts"><div><b>4.9 rating</b>From 600+ local clients</div><div><b>Since 2012</b>Same corner in Fourways</div><div><b>Open 6 days</b>Mondays to Saturdays</div></div></div>
+<div class="sec"><div class="wrap"><h2>Our most booked</h2>
+<ul class="board">@foreach (var s in Catalog.Services.Where(x => new[] { "fade", "combo", "classic" }.Contains(x.Id))) { <partial name="_Service" model="s" /> }</ul><p style="margin-top:24px"><a class="btn ghost" href="/Services">All services and prices</a></p></div></div>

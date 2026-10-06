@@ -1,0 +1,2 @@
+@model Service
+<li><div><h3>@Model.Name</h3></div><span class="pr">@("R" + Model.Price)</span><span class="mn">@Model.Minutes min</span><p>@Model.Desc</p><a class="btn sm" href="/Booking?s=@Model.Id">Book this</a></li>

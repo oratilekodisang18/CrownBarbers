@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+.vscode/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# ASP.NET
+appsettings.Development.json
+
+# Published/deployment files
+publish/
+*.zip

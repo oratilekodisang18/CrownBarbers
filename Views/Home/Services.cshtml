@@ -1,0 +1,4 @@
+@{ ViewData["Title"] = "Services"; }
+<div class="sec"><div class="wrap">
+<h1 style="font-size:clamp(2.6rem,6vw,4rem)">Services &amp; prices</h1><p class="note" style="margin-top:8px">Prices in rand. Kids cuts are for boys and girls under 12.</p>
+<ul class="board">@foreach (var s in Catalog.Services) { <partial name="_Service" model="s" /> }</ul></div></div>

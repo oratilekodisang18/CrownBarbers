@@ -1,0 +1,9 @@
+@model ConfirmVm
+@{ ViewData["Title"] = "Booking confirmed"; var b = Model.B; }
+<div class="sec"><div class="wrap" style="max-width:720px">
+<div class="ok"><h1 style="font-size:clamp(2.4rem,6vw,3.6rem)">You're booked in</h1><p class="note">Booking ref <b>@b.Ref</b></p></div>
+<div class="card"><dl><dt>Name</dt><dd>@b.Name</dd><dt>Service</dt><dd>@Model.S.Name</dd><dt>Barber</dt><dd>@Model.Br.Name</dd>
+<dt>When</dt><dd>@(b.Date.ToString("dddd, d MMMM yyyy", new System.Globalization.CultureInfo("en-ZA"))), @Cal.T(b.StartMin) to @Cal.T(b.StartMin + b.Minutes)</dd>
+<dt>Price</dt><dd>@("R" + b.Price)@(b.Promo ? " (FIRST15 applied)" : ""), pay in shop</dd></dl></div>
+<div class="cta" style="margin-top:20px"><a class="btn" href="@Model.Google" target="_blank" rel="noopener">Add to Google Calendar</a>
+<a class="btn ghost" href="/Booking/Ics/@b.Ref">Apple / Outlook (.ics)</a><a class="btn ghost" href="/Booking">Book another</a></div></div></div>

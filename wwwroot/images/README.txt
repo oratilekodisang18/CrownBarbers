@@ -1,0 +1,1 @@
+Add hero.jpg, about.jpg, thabo.jpg, lerato.jpg and ryan.jpg here (free photos from Unsplash or Pexels).
